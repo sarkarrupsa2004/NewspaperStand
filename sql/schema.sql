@@ -1,4 +1,3 @@
--- Create the database
 CREATE DATABASE IF NOT EXISTS newspaper_db;
 USE newspaper_db;
 

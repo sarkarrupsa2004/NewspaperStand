@@ -1,16 +1,13 @@
-
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
 
-    // Scanner to read input from keyboard
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int choice = 0;
 
-        // Keep showing menu until user chooses Exit
         while (choice != 5) {
             System.out.println("\n===== Newspaper Subscription System =====");
             System.out.println("1. Register Subscriber");
@@ -21,7 +18,7 @@ public class Main {
             System.out.print("Enter choice: ");
 
             choice = sc.nextInt();
-            sc.nextLine(); // clear the buffer
+            sc.nextLine();
 
             switch (choice) {
                 case 1: registerSubscriber(); break;
@@ -34,9 +31,7 @@ public class Main {
         }
     }
 
-    // ─────────────────────────────────────────
     // FEATURE 1: Register a new subscriber
-    // ─────────────────────────────────────────
     static void registerSubscriber() {
         System.out.print("Enter name: ");
         String name = sc.nextLine();
@@ -69,9 +64,7 @@ public class Main {
         }
     }
 
-    // ─────────────────────────────────────────
     // FEATURE 2: Record a payment
-    // ─────────────────────────────────────────
     static void recordPayment() {
         System.out.print("Enter subscriber ID: ");
         int subId = sc.nextInt();
@@ -96,9 +89,7 @@ public class Main {
         }
     }
 
-    // ─────────────────────────────────────────
     // FEATURE 3: Mark delivery for a subscriber
-    // ─────────────────────────────────────────
     static void markDelivery() {
         System.out.print("Enter subscriber ID: ");
         int subId = sc.nextInt();
@@ -123,9 +114,7 @@ public class Main {
         }
     }
 
-    // ─────────────────────────────────────────
     // FEATURE 4: View unpaid subscribers
-    // ─────────────────────────────────────────
     static void viewUnpaid() {
         System.out.print("Enter month to check (e.g. 2026-04): ");
         String month = sc.nextLine();
@@ -161,5 +150,3 @@ public class Main {
         }
     }
 }
-    
-
